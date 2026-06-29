@@ -17,7 +17,7 @@ It combines:
 - Public information sources
 - Optional AI assistance
 
-The goal is to create a desktop environment that feels like equipment from a believable near-future operations center while remaining practical for everyday use.
+The goal is to create a desktop environment that feels like equipment from a believable near-future operations center for MilSim and role-play. Immersion and visual cohesion take priority over general-purpose desktop workflows, while still preserving enough usability for normal operation when needed.
 
 ---
 
