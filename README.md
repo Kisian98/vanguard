@@ -19,6 +19,8 @@ It combines:
 
 The goal is to create a desktop environment that feels like equipment from a believable near-future operations center for MilSim and role-play. Immersion and visual cohesion take priority over general-purpose desktop workflows, while still preserving enough usability for normal operation when needed.
 
+Vanguard should be approached as a fictional product platform, not only as a Hyprland rice or dotfiles repository. The current NixOS/Hyprland build is the first reference implementation.
+
 ---
 
 ## Features (Planned)
@@ -44,9 +46,10 @@ The goal is to create a desktop environment that feels like equipment from a bel
 
 Vanguard values:
 
-- Simplicity
-- Reliability
-- Modularity
+- Responsiveness
+- Dependability
+- Meaningful information
+- Actionable feedback
 - Reproducibility
 - Technical craftsmanship
 
@@ -58,11 +61,12 @@ Every component should have a purpose.
 
 Vanguard is a fictional workstation created for:
 
-- Learning
-- Linux customization
-- Demonstrations
+- MilSim
 - Role-play events
+- Demonstrations
+- Linux customization
 - Technical experimentation
+- Portfolio development
 
 The project is not affiliated with any government, military, intelligence agency, emergency service, or other real-world organization.
 
