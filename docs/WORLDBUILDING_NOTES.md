@@ -40,7 +40,7 @@ The identity of Vanguard should remain separate from any single technical stack.
 Possible internal subsystem names:
 
 - Vanguard: overall platform
-- Nix: onboard AI operator
+- Nix: onboard AI operator candidate
 - Atlas: maps and geospatial display
 - Relay: communications and networking
 - Beacon: node discovery, signal, and presence
@@ -50,7 +50,7 @@ Possible internal subsystem names:
 - Dispatch: tasking, logs, and mission notes
 - Forge: configuration, deployment, and system building
 
-These names are placeholders. Keep, rename, or discard them as the project develops.
+These names are placeholders. Keep, rename, or discard them as the project develops. Fictional names are useful where they add identity. Plain technical names are better when clarity matters.
 
 ---
 
@@ -97,7 +97,7 @@ Reinforces the fictional field workstation experience.
 
 Examples:
 
-- Boot sequence
+- GRUB theme
 - Mission log
 - AI status
 - System initialization messages
@@ -175,15 +175,30 @@ The project should avoid direct imitation of real military systems, official ins
 
 ---
 
+## Current Decisions
+
+- The system name should be either Vanguard or Vanguard OS.
+- The primary user role is operator.
+- The AI operator name is not yet chosen.
+- Subsystems may use fictional names, but plain technical names are acceptable when they improve usability.
+- The first visible branded layer should likely be a custom GRUB theme. Firmware/vendor-logo customization can be considered later, but is higher risk and hardware-specific.
+- Fiction should be sprinkled on top. Vanguard remains NixOS with Hyprland underneath.
+- Custom sound design should be used only where it matters.
+- The current fictional direction leans toward a private-contractor field computing product.
+
+---
+
 ## Open Questions
 
-- Should the system call itself Vanguard OS, FieldStation, or simply Vanguard?
-- Should Nix be the AI operator name inside Vanguard?
-- Should modules use fictional subsystem names or plain technical names?
-- Should the Toughbook build have its own boot sequence and field profile?
+- Should the system primarily present itself as Vanguard or Vanguard OS?
+- What should the AI operator be named?
+- Should the Toughbook build have a distinct field profile beyond hardware-specific settings?
 - Should the interface support an event/demo mode separate from development mode?
 - Should public OSINT dashboards be embedded, linked, or recreated as local UI modules?
-- Should there be a lore document, or should the fiction remain implied through interface design?
+- Should lore remain implied through interface design for now, or should a small lore document be created later?
+- What kind of fictional private contractor built Vanguard, and what values would that organization have?
+- What problem does Vanguard solve inside its fictional world?
+- What should the first five minutes of using Vanguard feel like?
 
 ---
 
