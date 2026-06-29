@@ -6,9 +6,11 @@
 
 Vanguard is a fictional field workstation built on NixOS and Hyprland.
 
-The project aims to create an immersive, near-future command workstation suitable for demonstrations, role-play events, and as a showcase of modern Linux customization. Vanguard is designed to feel believable and cohesive while remaining entirely fictional.
+The project aims to create an immersive, near-future command workstation suitable for MilSim, role-play events, demonstrations, and portfolio development. Vanguard is designed to feel believable and cohesive while remaining entirely fictional.
 
-The project prioritizes usability and technical craftsmanship over visual excess. Every component should serve a purpose, even if that purpose is immersion.
+Vanguard should be treated as a fictional product platform. The current NixOS and Hyprland build is the first reference implementation, not the entire identity of the project.
+
+The project prioritizes immersion, usability, and technical craftsmanship over visual excess. Every component should serve a purpose, even if that purpose is atmosphere.
 
 ---
 
@@ -20,7 +22,8 @@ The project prioritizes usability and technical craftsmanship over visual excess
 - Integrate useful public information sources.
 - Support optional AI-assisted interaction.
 - Remain fully reproducible through Git.
-- Be suitable for demonstrations at LAN and role-play events.
+- Be suitable for demonstrations at LAN, MilSim, and role-play events.
+- Serve as a practical portfolio project for product identity, UX, documentation, and technical implementation.
 
 ---
 
@@ -28,10 +31,11 @@ The project prioritizes usability and technical craftsmanship over visual excess
 
 Vanguard should be:
 
-- Clean
-- Functional
 - Responsive
-- Minimal
+- Dependable
+- Meaningful
+- Actionable
+- Functional
 - Information-dense
 - Easy to maintain
 - Modular
@@ -94,6 +98,8 @@ It does not represent, imitate, or claim affiliation with:
 
 Branding, terminology, icons, and visual identity should remain original.
 
+The current working direction is a believable private-contractor field computing product, not an official military system.
+
 ---
 
 # Project Structure
@@ -123,7 +129,7 @@ The project is divided into three layers.
 ## Immersion
 
 - Theme
-- Boot sequence
+- GRUB theme
 - Login screen
 - Sound effects
 - AI subsystem
@@ -153,4 +159,4 @@ The project is not intended to become:
 
 A fully reproducible NixOS workstation that can be installed onto compatible hardware from a single Git repository while preserving the complete Vanguard experience.
 
-The project should be portable, modular, maintainable, and enjoyable to use.
+The project should be portable, modular, maintainable, and strong enough to stand as a product-design and technical portfolio piece.
