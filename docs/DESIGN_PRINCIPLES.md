@@ -32,6 +32,26 @@ A component should either:
 
 If it does none of these, it probably does not belong.
 
+## Core Systems vs Tools
+
+Core systems are part of Vanguard's identity. Tools are applications integrated into Vanguard.
+
+A core system should be designed carefully and remain consistent across the workstation. A tool can be replaced when a better option appears.
+
+This keeps Vanguard flexible without making its identity depend on every bundled application.
+
+## Integrate Before Rebuilding
+
+Vanguard should use existing software when it already solves the problem.
+
+Custom components should be created when existing tools cannot provide the required function, integration, or experience.
+
+## Offline First, Online Enhanced
+
+The workstation should remain useful without Internet access.
+
+Internet access should expand functionality through maps, dashboards, OSINT sources, and live feeds. It should not be required for the basic workstation experience.
+
 ## Fiction as a Layer
 
 Vanguard is still NixOS with Hyprland underneath.
@@ -70,4 +90,10 @@ Avoid sounds for routine UI noise such as window focus, hover effects, or ordina
 
 Vanguard should be approached as a fictional product platform and portfolio project.
 
-The current NixOS and Hyprland implementation is the first reference build. Future work may include additional profiles, interfaces, dashboards, hardware targets, or companion tools.
+The current NixOS and Hyprland implementation is the first reference build of Vanguard OS. Future work may include additional profiles, interfaces, dashboards, hardware targets, or companion tools.
+
+## Version 1.0
+
+Vanguard 1.0 means event-ready.
+
+It does not mean finished. It means the system is coherent, stable, and presentable enough to be used at its first event.

@@ -19,7 +19,15 @@ It combines:
 
 The goal is to create a desktop environment that feels like equipment from a believable near-future operations center for MilSim and role-play. Immersion and visual cohesion take priority over general-purpose desktop workflows, while still preserving enough usability for normal operation when needed.
 
-Vanguard should be approached as a fictional product platform, not only as a Hyprland rice or dotfiles repository. The current NixOS/Hyprland build is the first reference implementation.
+Vanguard should be approached as a fictional product platform, not only as a Hyprland rice or dotfiles repository. The current NixOS/Hyprland build is the first reference implementation of Vanguard OS.
+
+---
+
+## Product Identity
+
+Vanguard OS is developed in-universe by **Vanguard Systems**, a fictional private contractor focused on field computing products.
+
+The current project focuses only on Vanguard OS. The wider company and product ecosystem may be developed later as part of the project's fictional identity.
 
 ---
 
