@@ -1,62 +1,47 @@
 # Architecture
 
-> This document describes the planned architecture of the future **Vanguard OS** implementation. The current repository is documentation-first and serves as the project's planning and design reference.
+> Planned architecture for the future **Vanguard OS** implementation. This repository remains documentation-first and does not contain the OS itself.
 
 ---
 
-## Purpose
+## Repository Boundary
 
-The `vanguard` repository is not intended to contain the operating system implementation itself.
+The current `vanguard` repository is the planning and design source of truth.
 
-Instead, this repository serves as the source of truth for:
+It may contain:
 
-- Product vision
-- Project scope
-- Design principles
-- Architecture planning
-- User experience
-- Worldbuilding
-- Roadmaps
-- Future implementation decisions
-
-When development begins, the functional implementation should move into a separate repository.
-
----
-
-## Repository Strategy
-
-### Current Repository
-
-**Repository:** `vanguard`
-
-Purpose:
-
-- Planning
-- Documentation
-- Design
-- Product identity
-- Architecture
+- Architecture plans
+- Design references
 - UI concepts
 - Roadmaps
+- Product identity notes
+- Implementation notes for later use
 
-This repository should remain implementation-agnostic wherever possible.
+It should not contain:
 
-### Future Repository
+- Functional NixOS implementation files
+- Hardware-generated configuration
+- Secrets or private keys
+- Deployment credentials
+- Large runtime assets
 
-**Planned repository:** `vanguard-os`
+The future implementation repository is expected to be named `vanguard-os`.
 
-Purpose:
+---
+
+## Future Repository Purpose
+
+The future `vanguard-os` repository should contain:
 
 - NixOS configuration
 - Home Manager configuration
 - Hyprland configuration
-- Assets
+- Runtime assets
 - Scripts
-- Installation
-- Deployment
+- Installation and deployment logic
 - Testing
 
-The implementation repository should reference this repository as its architectural and design source.
+It should reference this repository as its design and architecture source.
 
 ---
 
@@ -70,11 +55,7 @@ vanguard-os/
 ├── flake.lock
 ├── hosts/
 │   ├── desktop/
-│   │   ├── configuration.nix
-│   │   └── hardware-configuration.nix
 │   └── toughbook/
-│       ├── configuration.nix
-│       └── hardware-configuration.nix
 ├── modules/
 │   ├── core/
 │   ├── desktop/
@@ -94,17 +75,15 @@ vanguard-os/
 └── docs/
 ```
 
-This structure is a planning reference, not a final commitment. It should be adjusted when implementation work begins.
+This is a planning reference, not a final commitment.
 
 ---
 
-## Planned Layer Architecture
-
-The future implementation should be divided into distinct layers.
+## Planned Layers
 
 ### Foundation
 
-Responsible for the operating system itself.
+The operating system base.
 
 Examples:
 
@@ -124,7 +103,7 @@ The foundation layer must remain usable even if the immersion layer is incomplet
 
 ### Applications
 
-Provides operator functionality.
+Replaceable tools that provide operator functionality.
 
 Examples:
 
@@ -137,11 +116,9 @@ Examples:
 - File manager
 - Media tools
 
-Applications should remain replaceable whenever practical.
-
 ### Immersion
 
-Responsible for Vanguard's identity.
+Vanguard-specific identity and experience.
 
 Examples:
 
@@ -155,13 +132,11 @@ Examples:
 - Interface language
 - Calm failure states
 
-This layer should reinforce the fictional workstation experience without interfering with normal usability.
+The immersion layer should reinforce the fictional workstation experience without interfering with normal usability.
 
 ---
 
 ## Host Profiles
-
-The implementation is expected to support multiple hardware profiles.
 
 Initial planned profiles:
 
@@ -170,28 +145,22 @@ Initial planned profiles:
 
 The desktop profile should make iteration easy. The Toughbook profile should adapt Vanguard to portable field hardware.
 
-Additional profiles may be introduced later if required.
-
 ---
 
 ## Core Systems vs Tools
 
-Vanguard should distinguish between core systems and modular tools.
-
-Core systems define the platform identity. Changing them changes how Vanguard feels and behaves.
+Core systems define the platform identity. Tools are integrated applications that can be replaced.
 
 Possible core systems:
 
 - Configuration
-- Atlas: maps and geospatial display
-- Relay: communications and networking candidate
-- Sentinel: system monitoring and diagnostics
-- Archive: documents, notes, manuals, and reference material
-- Operator AI: copilot, expert system, knowledge base, and planning assistant
+- Atlas
+- Relay
+- Sentinel
+- Archive
+- Operator AI
 - Authentication
 - System status
-
-Tools are integrated applications. Replacing a tool should not change Vanguard's identity.
 
 Possible tools:
 
@@ -205,9 +174,7 @@ Possible tools:
 
 ---
 
-## Implementation Philosophy
-
-The future implementation should follow these principles:
+## Implementation Principles
 
 - Reproducible from Git
 - Modular by default
@@ -234,36 +201,11 @@ sudo nixos-rebuild switch --flake .#desktop
 sudo nixos-rebuild switch --flake .#toughbook
 ```
 
-These commands are illustrative only. The exact implementation will be decided in the future `vanguard-os` repository.
-
----
-
-## Current Repository Boundary
-
-This planning repository should not contain:
-
-- Functional NixOS implementation files
-- Hardware-specific generated configuration
-- Secrets
-- Private keys
-- Real deployment credentials
-- Large binary assets intended for runtime use
-
-It may contain:
-
-- Architecture plans
-- Design references
-- UI concepts
-- Roadmaps
-- Product identity notes
-- Planning documents
-- Implementation notes for later use
+These commands are illustrative only. Exact implementation details belong in the future `vanguard-os` repository.
 
 ---
 
 ## Deferred Architecture Topics
-
-The following topics should be addressed when the implementation repository is created:
 
 - Final module structure
 - Package selection
