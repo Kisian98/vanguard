@@ -38,6 +38,7 @@ It should not contain the actual operating system implementation, hardware-gener
 - `docs/ROADMAP.md` — planned project milestones
 - `docs/ARCHITECTURE.md` — planned future implementation architecture
 - `docs/WORLDBUILDING_NOTES.md` — temporary fictional identity notes
+- `docs/INSPIRATIONS.md` — reference projects and influence boundaries
 
 ---
 
