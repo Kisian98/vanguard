@@ -1,22 +1,18 @@
 # Roadmap
 
-> This roadmap outlines the planned evolution of Vanguard. It is a living document and should change as the project matures.
+> Planned evolution of Vanguard. This is a living document and should change as the project matures.
 
 ---
 
 ## Vision
 
-Build a believable fictional field workstation that combines a coherent product identity with a reproducible NixOS implementation.
-
-Vanguard OS is the first reference implementation of the Vanguard platform. In-universe, it is developed by Vanguard Systems, a fictional private contractor focused on field computing products.
+Build a believable fictional field workstation that combines a coherent product identity with a future reproducible NixOS/Hyprland implementation.
 
 Version numbers represent project maturity, not final feature completeness.
 
 ---
 
 ## Roadmap Principles
-
-The roadmap should follow these principles:
 
 - Build the reproducible base before heavy theming.
 - Integrate existing software before creating custom replacements.
@@ -25,36 +21,7 @@ The roadmap should follow these principles:
 - Make each milestone usable, testable, and reviewable.
 - Treat version 1.0 as event-ready, not finished.
 
----
-
-## Core Systems and Tools
-
-Vanguard should separate core systems from replaceable tools.
-
-Core systems are part of the platform identity. They define how Vanguard feels and behaves.
-
-Possible core systems:
-
-- Configuration
-- Atlas: maps and geospatial display
-- Relay: communications and networking candidate
-- Sentinel: system monitoring and diagnostics
-- Archive: documents, notes, manuals, and reference material
-- Operator AI: copilot, expert system, knowledge base, and planning assistant
-- Authentication
-- System status
-
-Tools are applications integrated into Vanguard. They can be replaced without changing the identity of the platform.
-
-Possible tools:
-
-- Browser
-- Terminal
-- Obsidian
-- ShadowBroker
-- System monitors
-- Media tools
-- File manager
+Detailed architecture planning lives in `docs/ARCHITECTURE.md`.
 
 ---
 
@@ -69,29 +36,26 @@ Possible tools:
 - Development host configuration
 - Core documentation
 - Git workflow
-- First branch and pull request workflow
 
-**Exit criteria:** Vanguard can be built and iterated from the repository on a development machine.
+**Exit criteria:** Vanguard can be built and iterated from the future implementation repository on a development machine.
 
 ---
 
 ## Version 0.2 — Core Platform
 
-**Objective:** Create a stable workstation base.
+**Objective:** Create a stable workstation base before the immersion layer.
 
 - Shared Nix modules
 - Desktop profile
 - Toughbook profile
 - Common package set
 - Basic Waybar
-- Terminal configuration
-- Browser
-- File manager
+- Terminal, browser, and file manager
 - Theme variables
 - Core keybinds
 - Basic system status
 
-**Exit criteria:** Vanguard works as a normal Hyprland workstation before the immersion layer is added.
+**Exit criteria:** Vanguard works as a normal Hyprland workstation before the immersive layer is added.
 
 ---
 
@@ -107,11 +71,10 @@ Possible tools:
 - Icons
 - Window styling
 - Audio cues
-- Basic animation language
 - Failure-state language
 - Initial Vanguard Systems branding
 
-**Exit criteria:** The system is clearly recognizable as Vanguard without relying on explanation.
+**Exit criteria:** The system is recognizable as Vanguard without relying on explanation.
 
 ---
 
@@ -119,7 +82,7 @@ Possible tools:
 
 **Objective:** Make the workstation feel purpose-built.
 
-- Mission or operations dashboard
+- Operations dashboard
 - Status widgets
 - System health display
 - Maps
@@ -127,7 +90,6 @@ Possible tools:
 - Offline-first behavior
 - Operator workflow refinement
 - Calm warning and error states
-- Minimal interaction path for field/event use
 
 **Exit criteria:** The system feels like equipment for an operator, not a themed desktop.
 
@@ -142,7 +104,6 @@ Possible tools:
 - Public data sources
 - OSINT tooling research
 - ShadowBroker evaluation
-- Documentation improvements
 - Tool launcher or access pattern
 - Local reference material
 
@@ -161,7 +122,6 @@ Possible tools:
 - Hardware-specific keybinds
 - Offline resource packs
 - Network fallback behavior
-- Field-oriented power and display defaults
 
 **Exit criteria:** Vanguard can be deployed to the Toughbook as a credible field workstation profile.
 
@@ -178,9 +138,8 @@ Possible tools:
 - Documentation cleanup
 - Event checklist
 - Known failure recovery steps
-- Backup profile or recovery path
 
-**Exit criteria:** Vanguard is ready for a controlled demo without needing constant manual explanation.
+**Exit criteria:** Vanguard is ready for a controlled demo without constant manual explanation.
 
 ---
 
@@ -188,9 +147,9 @@ Possible tools:
 
 **Objective:** Vanguard is ready for its first event.
 
-Version 1.0 does not mean the project is finished. It means the workstation is coherent, stable, and presentable enough to be used at a real MilSim or role-play event.
+Version 1.0 does not mean finished. It means the workstation is coherent, stable, and presentable enough to be used at a real MilSim or role-play event.
 
-Minimum 1.0 expectations:
+Minimum expectations:
 
 - Reproducible install path
 - Stable desktop session
@@ -205,8 +164,6 @@ Minimum 1.0 expectations:
 
 ## Deferred Topics
 
-These are intentionally left for later discussion.
-
 - AI operator name
 - AI personality, if a Jarvis-like assistant becomes useful
 - Demo mode vs development mode
@@ -215,4 +172,4 @@ These are intentionally left for later discussion.
 - Wider Vanguard Systems product line
 - Optional lore document
 - Slogan or tagline
-- Whether some engineering or debug screens should intentionally look unfinished
+- Intentional engineering/debug-screen aesthetic
