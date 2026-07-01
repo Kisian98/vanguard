@@ -8,7 +8,7 @@
 
 Vanguard is a fictional field workstation concept for MilSim, role-play, demonstrations, and technical experimentation.
 
-The project currently documents the product vision, design direction, roadmap, and planned architecture for **Vanguard OS**. The functional NixOS/Hyprland implementation will live in a separate future repository.
+The project documents the product vision, design direction, roadmap, and planned architecture for **Vanguard OS**. Early bare-metal experimentation has now begun on a dedicated NixOS host, while the operating system implementation itself remains outside this repository until the future `vanguard-os` repository is created.
 
 In-universe, Vanguard OS is developed by **Vanguard Systems**, a fictional private contractor focused on field computing products.
 
@@ -16,7 +16,7 @@ In-universe, Vanguard OS is developed by **Vanguard Systems**, a fictional priva
 
 ## Repository Purpose
 
-This repository is for planning and design only.
+This repository is for planning and design first.
 
 It contains:
 
@@ -24,10 +24,11 @@ It contains:
 - Design principles
 - Roadmap
 - Architecture planning
+- Implementation milestone notes
 - Worldbuilding notes
 - Future implementation guidance
 
-It should not contain the actual operating system implementation, hardware-generated configuration, secrets, deployment credentials, or large runtime assets.
+It should not contain the actual operating system implementation, hardware-generated configuration, secrets, deployment credentials, private network details, or large runtime assets.
 
 ---
 
@@ -37,6 +38,7 @@ It should not contain the actual operating system implementation, hardware-gener
 - `docs/DESIGN_PRINCIPLES.md` — design rules and experience principles
 - `docs/ROADMAP.md` — planned project milestones
 - `docs/ARCHITECTURE.md` — planned future implementation architecture
+- `docs/IMPLEMENTATION_LOG.md` — confirmed build milestones and local implementation notes
 - `docs/WORLDBUILDING_NOTES.md` — temporary fictional identity notes
 - `docs/INSPIRATIONS.md` — reference projects and influence boundaries
 
@@ -44,9 +46,18 @@ It should not contain the actual operating system implementation, hardware-gener
 
 ## Project Status
 
-Vanguard is in the planning and design phase.
+Vanguard has moved from concept-only planning into the first controlled bare-metal experiment.
 
-The first implementation repository is expected to be created later as `vanguard-os` when practical testing begins.
+Confirmed first host milestone:
+
+- Dedicated NixOS installation for Vanguard experimentation
+- Isolated drive and EFI setup
+- Existing Fedora and Windows installations left untouched
+- Fedora GRUB entry named `Vanguard OS (NixOS)`
+- Tailscale and OpenSSH enabled for remote administration
+- Initial base tools installed, including `fastfetch`
+
+The first implementation repository is still expected to be created later as `vanguard-os` when the local configuration is stable enough to formalize.
 
 ---
 
