@@ -145,13 +145,66 @@ The live local NixOS configuration is being versioned on the Vanguard machine fi
 
 ---
 
+## 2026-07-02 — Terminal Comfort and Lock Shortcut
+
+**Status:** Complete.
+
+Confirmed setup:
+
+- Kitty moved from plain package installation into Home Manager's `programs.kitty` configuration.
+- Kitty font size increased for easier use inside Hyprland.
+- Kitty copy and paste keybindings adjusted so `CTRL + C` copies selected text or interrupts when no text is selected, and `CTRL + V` pastes from clipboard.
+- `swaylock` added as the first lock utility.
+- `SUPER + L` configured as the desktop lock shortcut.
+- `nixos-rebuild build --flake .#vanguard` completed successfully.
+- `nixos-rebuild switch --flake .#vanguard` completed successfully after validation.
+- Local terminal and lock changes were committed and merged into local `master`.
+
+Known follow-up:
+
+- The current `swaylock` visual style is temporary. A proper Vanguard lock screen theme should be added later, after the core utility baseline is stable.
+
+---
+
+## 2026-07-02 — Desktop Utilities Foundation
+
+**Status:** Partially complete.
+
+Confirmed setup:
+
+- Local `desktop-utilities-foundation` branch created before adding desktop utilities.
+- Nautilus added as the first file manager.
+- Standard user directories added through Home Manager-managed XDG user directories.
+- `gvfs` enabled system-wide so Nautilus Trash support works correctly.
+- `grim`, `slurp`, and `wl-clipboard` added for Wayland screenshot and clipboard workflows.
+- Full-screen screenshot keybind added with `SUPER + Print`.
+- Region screenshot keybind added with `SUPER + SHIFT + Print`.
+- Screenshot output directory confirmed under the user's Pictures directory.
+- `cliphist` added as the clipboard history foundation.
+- Clipboard entries are stored correctly.
+- The manual clipboard picker command works.
+- The `SUPER + V` clipboard picker keybind does not launch correctly yet and is intentionally left as a TODO instead of marked complete.
+- Local `desktop-utilities-foundation` branch was fast-forwarded into `master`.
+- Temporary local `desktop-utilities-foundation` branch was removed after merge.
+- Local Git tree returned to a clean state.
+
+Known follow-up:
+
+- Fix the clipboard history picker keybind.
+- Add a simple status bar.
+- Add basic audio and display controls.
+- Improve lock screen appearance after utility basics are stable.
+
+---
+
 ## Immediate Next Steps
 
-1. Create a local `desktop-utilities-foundation` branch on the Vanguard machine.
-2. Add the smallest useful desktop utility set.
-3. Keep the first utility change focused on file management, screenshots, and clipboard basics.
-4. Do not start identity/theming work until normal desktop utilities are stable.
-5. Update this repository again after the utility foundation is tested and merged locally.
+1. Resolve the clipboard history picker bind, or choose a different launcher pattern if Hyprland command execution remains fragile.
+2. Add a simple status bar, likely after validating the expected Waybar setup against official and package documentation.
+3. Add audio and volume control basics.
+4. Add basic display and brightness controls.
+5. Keep lock screen theming deferred until the utility baseline is stable.
+6. Keep updating `docs/TODO.md` as the working sequence changes.
 
 ---
 
