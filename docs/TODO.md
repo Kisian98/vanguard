@@ -55,23 +55,23 @@ The first big goal is not theme polish. It is a workstation that behaves correct
 
 ---
 
-### 5. Confirm XDG desktop portals
+### 5. XDG desktop portals
 
-**Status:** Next.
+**Status:** Complete locally.
 
-**Why:** Screen sharing, file pickers, browser integration, and sandboxed applications often rely on XDG desktop portals. Broken portals can make a desktop look fine while quietly breaking basic workflows.
-
-Expected result:
-
-- Hyprland portal support is installed and active.
-- File picker behavior works in graphical applications.
-- Screen capture or sharing behavior is verified later when needed.
+- XDG desktop portals are enabled system-wide.
+- Hyprland portal support is installed.
+- GTK portal support is installed as the general desktop-dialog fallback.
+- Preferred backend order is `hyprland;gtk`.
+- Portal service and GTK portal service were active.
+- Hyprland portal reported PipeWire connection and successful screencopy initialization.
+- Local commit: `d69c543` — `Add XDG desktop portal foundation`.
 
 ---
 
 ### 6. Add basic audio and volume controls
 
-**Status:** Open.
+**Status:** Next.
 
 Expected result:
 
