@@ -6,7 +6,7 @@
 
 ## Vision
 
-Build a believable fictional field workstation that combines a coherent product identity with a future reproducible NixOS/Hyprland implementation.
+Build a believable fictional workstation that combines a coherent product identity with a future reproducible NixOS/Hyprland implementation.
 
 Version numbers represent project maturity, not final feature completeness.
 
@@ -76,19 +76,19 @@ Completed:
 - Simple Waybar status bar added and tested locally.
 - Themeable SwayNotificationCenter notification daemon added and tested locally.
 - Graphical privilege prompt agent added and tested locally.
+- XDG desktop portal foundation added and verified locally.
 
 Remaining:
 
-1. Confirm XDG desktop portal behavior.
-2. Add basic audio and volume controls.
-3. Add basic display and brightness controls.
-4. Development host configuration cleanup.
-5. Basic repository structure for the future implementation repository.
-6. Core documentation sync.
+1. Add basic audio and volume controls.
+2. Add basic display and brightness controls.
+3. Development host configuration cleanup.
+4. Basic repository structure for the future implementation repository.
+5. Core documentation sync.
 
 Current next action:
 
-- Confirm XDG desktop portals as part of the desktop sanity baseline.
+- Add basic audio and volume controls as part of the desktop sanity baseline.
 
 **Exit criteria:** Vanguard can be built and iterated from a flake-based local configuration, then moved into the future implementation repository when stable enough.
 
@@ -100,7 +100,7 @@ Current next action:
 
 - Shared Nix modules
 - Desktop profile
-- Toughbook profile
+- Portable hardware profile
 - Common package set
 - Basic Waybar
 - Terminal, browser, and file manager
@@ -116,7 +116,7 @@ Current next action:
 
 **Objective:** Establish the visual and interaction language.
 
-- GRUB theme
+- Boot theme
 - Login screen
 - Wallpaper system
 - Color palette
@@ -153,9 +153,9 @@ Current next action:
 **Objective:** Integrate useful tools into a cohesive platform.
 
 - Obsidian integration
-- AI subsystem exploration
+- Assistant subsystem exploration
 - Public data sources
-- OSINT tooling research
+- Research tooling
 - ShadowBroker evaluation
 - Tool launcher or access pattern
 - Local reference material
@@ -164,11 +164,11 @@ Current next action:
 
 ---
 
-## Version 0.6 — Field Profile
+## Version 0.6 — Portable Profile
 
 **Objective:** Optimize Vanguard for portable hardware.
 
-- Toughbook-specific configuration
+- Portable-hardware configuration
 - Battery optimization
 - Touchscreen support
 - Display scaling
@@ -176,7 +176,7 @@ Current next action:
 - Offline resource packs
 - Network fallback behavior
 
-**Exit criteria:** Vanguard can be deployed to the Toughbook as a credible field workstation profile.
+**Exit criteria:** Vanguard can be deployed to portable hardware as a credible workstation profile.
 
 ---
 
@@ -200,25 +200,25 @@ Current next action:
 
 **Objective:** Vanguard is ready for its first event.
 
-Version 1.0 does not mean finished. It means the workstation is coherent, stable, and presentable enough to be used at a real MilSim or role-play event.
+Version 1.0 does not mean finished. It means the workstation is coherent, stable, and presentable enough to be used at a real event.
 
 Minimum expectations:
 
 - Reproducible install path
 - Stable desktop session
 - Cohesive Vanguard identity
-- Working field profile
+- Working portable profile
 - Clear operator workflow
 - Offline-capable baseline
 - Event-ready documentation
-- No major immersion-breaking rough edges during normal use
+- No major rough edges during normal use
 
 ---
 
 ## Deferred Topics
 
-- AI operator name
-- AI personality, if a Jarvis-like assistant becomes useful
+- Assistant name
+- Assistant personality, if that subsystem becomes useful
 - Demo mode vs development mode
 - Design language details
 - Public dashboard implementation
