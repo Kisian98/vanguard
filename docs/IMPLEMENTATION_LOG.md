@@ -118,6 +118,27 @@ Confirmed setup:
 - Temporary local `greetd-foundation` branch was removed after merge.
 - Local Git tree returned to a clean state.
 
+---
+
+## 2026-07-02 — Desktop Launcher and Browser Foundation
+
+**Status:** Complete.
+
+Confirmed setup:
+
+- Local `desktop-foundation` branch created before editing the desktop package set.
+- `fuzzel` added as the first Wayland-native app launcher.
+- `SUPER + SPACE` configured as the launcher keybind.
+- Vivaldi added as the first graphical browser.
+- Existing unfree-package support was reused for Vivaldi.
+- `nixos-rebuild build --flake .#vanguard` completed successfully.
+- `nixos-rebuild switch --flake .#vanguard` completed successfully after validation.
+- Fuzzel opened correctly from the Hyprland keybind.
+- Vivaldi launched correctly from Fuzzel.
+- Local `desktop-foundation` branch was fast-forwarded into `master`.
+- Temporary local `desktop-foundation` branch was removed after merge.
+- Local Git tree returned to a clean state.
+
 Important boundary:
 
 The live local NixOS configuration is being versioned on the Vanguard machine first. This repository records the milestone and order of work, but still does not contain the live implementation.
@@ -126,11 +147,11 @@ The live local NixOS configuration is being versioned on the Vanguard machine fi
 
 ## Immediate Next Steps
 
-1. Create a local `desktop-foundation` branch on the Vanguard machine.
-2. Add the smallest useful desktop package set.
-3. Keep the first desktop change focused on a normal operator workflow inside Hyprland.
-4. Do not start identity/theming work until the basic desktop tools are stable.
-5. Update this repository again after the desktop foundation is tested and merged locally.
+1. Create a local `desktop-utilities-foundation` branch on the Vanguard machine.
+2. Add the smallest useful desktop utility set.
+3. Keep the first utility change focused on file management, screenshots, and clipboard basics.
+4. Do not start identity/theming work until normal desktop utilities are stable.
+5. Update this repository again after the utility foundation is tested and merged locally.
 
 ---
 
