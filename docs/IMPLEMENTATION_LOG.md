@@ -253,19 +253,42 @@ Confirmed setup:
 - Local Git tree returned to a clean state.
 - Completed in local `/etc/nixos` commit `a97ae47` — `Add polkit authentication agent`.
 
+---
+
+## 2026-07-02 — XDG Desktop Portal Foundation
+
+**Status:** Complete locally.
+
+Confirmed setup:
+
+- Local `xdg-portals-foundation` branch created before adding portal configuration.
+- XDG desktop portals enabled through the system configuration.
+- Hyprland portal backend added.
+- GTK portal backend added as the general dialog fallback.
+- Preferred backend order generated as `hyprland;gtk`.
+- Portal systemd user units were present in the active system profile.
+- Main portal service was active.
+- GTK portal service was active.
+- Hyprland portal initialized with PipeWire connected and screencopy available.
+- Portal backend files were present in the active system profile.
+- Local `xdg-portals-foundation` branch was fast-forwarded into `master`.
+- Temporary local `xdg-portals-foundation` branch was removed after merge.
+- Local Git tree returned to a clean state.
+- Completed in local `/etc/nixos` commit `d69c543` — `Add XDG desktop portal foundation`.
+
 Known follow-up:
 
-- Confirm XDG desktop portal behavior.
-- Add basic audio and display controls.
+- Add basic audio and volume controls.
+- Add basic display and brightness controls.
 - Improve lock screen appearance after utility basics are stable.
 
 ---
 
 ## Immediate Next Steps
 
-1. Confirm XDG desktop portal behavior.
-2. Add audio and volume control basics.
-3. Add basic display and brightness controls.
+1. Add audio and volume control basics.
+2. Add basic display and brightness controls.
+3. Add idle and lock behavior.
 4. Keep lock screen theming deferred until the utility baseline is stable.
 5. Keep updating `docs/TODO.md` as the working sequence changes.
 
