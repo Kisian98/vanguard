@@ -55,6 +55,8 @@ Confirmed first host milestone:
 - Existing Fedora and Windows installations left untouched
 - Tailscale and OpenSSH enabled for remote administration
 - Initial base tools installed, including `fastfetch`
+- Local `/etc/nixos` Git baseline established
+- Local flake workflow tested and made permanent
 
 The first implementation repository is still expected to be created later as `vanguard-os` when the local configuration is stable enough to formalize.
 

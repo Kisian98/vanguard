@@ -47,28 +47,27 @@ Completed:
 
 **Objective:** Establish the reproducible base system.
 
-Current order:
+Completed:
 
-1. Local `/etc/nixos` Git history.
-2. Local `.gitignore` for build outputs and scratch files.
-3. Flakes support enabled in the existing NixOS configuration.
-4. Initial `flake.nix` and `flake.lock`.
-5. Flake test rebuild with `.#vanguard`.
-6. Permanent flake switch.
-7. Merge local `flake-conversion` branch back into the local stable branch.
-8. Home Manager integration.
-9. Hyprland running.
-10. Development host configuration cleanup.
-11. Basic repository structure for the future implementation repository.
-12. Core documentation sync.
+- Local `/etc/nixos` Git history.
+- Local `.gitignore` for build outputs and scratch files.
+- Flakes support enabled in the existing NixOS configuration.
+- Initial `flake.nix` and `flake.lock`.
+- Flake test rebuild with `.#vanguard`.
+- Permanent flake switch.
+- Local `flake-conversion` branch merged back into `master`.
 
-Progress:
+Remaining:
 
-- Local Git baseline is complete.
-- Flakes support is enabled.
-- Initial local flake exists.
-- Flake test rebuild has succeeded.
-- Permanent flake switch is the next local action.
+1. Home Manager integration.
+2. Hyprland running.
+3. Development host configuration cleanup.
+4. Basic repository structure for the future implementation repository.
+5. Core documentation sync.
+
+Current next action:
+
+- Start the local `home-manager-foundation` branch.
 
 **Exit criteria:** Vanguard can be built and iterated from a flake-based local configuration, then moved into the future implementation repository when stable enough.
 

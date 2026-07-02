@@ -40,10 +40,23 @@ Confirmed setup:
 - Initial system configuration committed as the recoverable base.
 - Local `.gitignore` added for Nix build outputs, editor files, and scratch files.
 - Flakes support enabled through `nix.settings.experimental-features`.
+
+---
+
+## 2026-07-02 — Local Flake Foundation
+
+**Status:** Complete.
+
+Confirmed setup:
+
 - Local `flake-conversion` branch created before introducing `flake.nix`.
 - Initial `flake.nix` and `flake.lock` created.
 - `nix flake show` confirmed `nixosConfigurations.vanguard` exists.
 - `nixos-rebuild test --flake .#vanguard` completed successfully.
+- `nixos-rebuild switch --flake .#vanguard` completed successfully.
+- Local `flake-conversion` branch was fast-forwarded into `master`.
+- Temporary local `flake-conversion` branch was removed after merge.
+- Local Git tree returned to a clean state.
 
 Important boundary:
 
@@ -53,13 +66,11 @@ The live local NixOS configuration is being versioned on the Vanguard machine fi
 
 ## Immediate Next Steps
 
-1. Run `nixos-rebuild switch --flake .#vanguard` locally to make the flake workflow permanent.
-2. Verify the local Git tree is clean after the flake-based switch.
-3. Merge the local `flake-conversion` branch back into `master` on the Vanguard machine.
-4. Continue with Home Manager.
-5. Enable Hyprland only after Home Manager and the flake base are stable.
-6. Configure `greetd` as the login foundation.
-7. Begin Vanguard identity work only after the base system is reproducible.
+1. Create a local `home-manager-foundation` branch on the Vanguard machine.
+2. Add Home Manager in the smallest viable form.
+3. Keep the first Home Manager change focused on user-level package/profile control only.
+4. Do not start Hyprland, `greetd`, or identity/theming work until Home Manager is stable.
+5. Update this repository again after the Home Manager foundation is tested and merged locally.
 
 ---
 
