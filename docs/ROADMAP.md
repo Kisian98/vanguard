@@ -75,20 +75,20 @@ Completed:
 - Clipboard history storage and picker shortcut added and tested locally.
 - Simple Waybar status bar added and tested locally.
 - Themeable SwayNotificationCenter notification daemon added and tested locally.
+- Graphical privilege prompt agent added and tested locally.
 
 Remaining:
 
-1. Confirm polkit authentication flow.
-2. Confirm XDG desktop portal behavior.
-3. Add basic audio and volume controls.
-4. Add basic display and brightness controls.
-5. Development host configuration cleanup.
-6. Basic repository structure for the future implementation repository.
-7. Core documentation sync.
+1. Confirm XDG desktop portal behavior.
+2. Add basic audio and volume controls.
+3. Add basic display and brightness controls.
+4. Development host configuration cleanup.
+5. Basic repository structure for the future implementation repository.
+6. Core documentation sync.
 
 Current next action:
 
-- Confirm polkit authentication flow as part of the desktop sanity baseline.
+- Confirm XDG desktop portals as part of the desktop sanity baseline.
 
 **Exit criteria:** Vanguard can be built and iterated from a flake-based local configuration, then moved into the future implementation repository when stable enough.
 
