@@ -16,25 +16,10 @@ The first big goal is not theme polish. It is a workstation that behaves correct
 
 **Status:** Complete locally.
 
-**Why:** Clipboard history prevents repeated copy/paste churn and makes the workstation more forgiving during real use.
-
-Confirmed result:
-
 - `wl-paste --watch cliphist store` starts automatically.
-- Clipboard entries are stored across normal copy operations.
 - `SUPER + V` opens the clipboard history picker through Fuzzel.
-- Selecting an item copies it back to the active clipboard.
 - `CTRL + V` pastes the selected item after picker selection.
-
-Known-good picker command:
-
-```sh
-cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
-```
-
-Local implementation note:
-
-- Completed in local `/etc/nixos` commit `f73d80a` — `Fix clipboard history picker shortcut`.
+- Local commit: `f73d80a` — `Fix clipboard history picker shortcut`.
 
 ---
 
@@ -42,19 +27,9 @@ Local implementation note:
 
 **Status:** Complete locally.
 
-**Why:** The desktop needed persistent system information before it could be treated as a usable workstation baseline.
-
-Confirmed result:
-
 - Waybar starts under Hyprland.
-- Bar content is minimal and readable.
 - Initial modules include Hyprland workspaces, clock, network, CPU, memory, and tray.
-- Configuration remains generic enough to adjust later.
-- No heavy Vanguard theming has been added yet.
-
-Local implementation note:
-
-- Completed in local `/etc/nixos` commit `4dc5eab` — `Add status bar foundation`.
+- Local commit: `4dc5eab` — `Add status bar foundation`.
 
 ---
 
@@ -62,39 +37,27 @@ Local implementation note:
 
 **Status:** Complete locally.
 
-**Why:** Many desktop tools rely on notifications for useful feedback. The chosen daemon also needs to be themeable later so it can fit the VanguardOS look and feel.
-
-Confirmed result:
-
 - `swaync` / SwayNotificationCenter added as the notification daemon.
-- `libnotify` added so `notify-send` can be used for testing.
-- Hyprland startup configuration includes `exec-once = swaync`.
-- Test notification appeared correctly.
-- The daemon is suitable for later visual customization through configuration and CSS-style theming.
-
-Local implementation note:
-
-- Completed in local `/etc/nixos` commit `f646cfb` — `Add notification daemon foundation`.
+- `notify-send` test notification appeared correctly.
+- The daemon is suitable for later visual customization.
+- Local commit: `f646cfb` — `Add notification daemon foundation`.
 
 ---
 
-### 4. Confirm polkit authentication flow
+### 4. Graphical privilege prompt agent
 
-**Status:** Next.
+**Status:** Complete locally.
 
-**Why:** Graphical administration tasks often need an authentication prompt. If no polkit agent is available, GUI tools may fail without giving a useful reason.
-
-Expected result:
-
-- A polkit agent is installed or confirmed active.
-- GUI privilege prompts work when needed.
-- The chosen agent is simple and compatible with the Hyprland session.
+- A graphical privilege prompt agent was added for Hyprland sessions.
+- Startup is handled through the generated Hyprland configuration.
+- Manual launch stayed running silently, which is expected for this background agent.
+- Local commit: `a97ae47` — `Add polkit authentication agent`.
 
 ---
 
 ### 5. Confirm XDG desktop portals
 
-**Status:** Open.
+**Status:** Next.
 
 **Why:** Screen sharing, file pickers, browser integration, and sandboxed applications often rely on XDG desktop portals. Broken portals can make a desktop look fine while quietly breaking basic workflows.
 
@@ -110,8 +73,6 @@ Expected result:
 
 **Status:** Open.
 
-**Why:** A workstation needs reliable sound output and quick volume control before it can be considered comfortable for daily use or demos.
-
 Expected result:
 
 - Audio service is confirmed.
@@ -125,8 +86,6 @@ Expected result:
 
 **Status:** Open.
 
-**Why:** The system should support routine screen adjustment before moving toward laptop or field hardware profiles.
-
 Expected result:
 
 - Brightness control utility is installed where hardware supports it.
@@ -138,8 +97,6 @@ Expected result:
 ### 8. Add idle and lock behavior
 
 **Status:** Open.
-
-**Why:** Manual lock works through `SUPER + L`, but the system should also lock after inactivity. A workstation should not depend on perfect human memory. Humans are not that product line.
 
 Expected result:
 
@@ -154,8 +111,6 @@ Expected result:
 
 **Status:** Open.
 
-**Why:** Opening files should not feel like a small court case. The system needs sensible defaults for browser links, directories, text files, images, PDFs, and archives.
-
 Expected result:
 
 - Browser default is set.
@@ -169,8 +124,6 @@ Expected result:
 
 **Status:** Open.
 
-**Why:** Normal desktop use includes opening compressed files. Missing archive support is one of those tiny omissions that becomes annoying instantly.
-
 Expected result:
 
 - Common archive formats can be opened and extracted.
@@ -182,8 +135,6 @@ Expected result:
 ### 11. Add font, icon, and cursor basics
 
 **Status:** Open.
-
-**Why:** Before full theming, the desktop still needs readable fonts, consistent icons, and a usable cursor. This is utility polish, not identity work.
 
 Expected result:
 
@@ -198,13 +149,11 @@ Expected result:
 
 **Status:** Deferred until utility baseline is stable.
 
-**Why:** Locking works through `swaylock`, but the default visual style is temporary and does not fit Vanguard. The lock screen should eventually match the project identity, but theming should not interrupt core utility work.
-
 Expected result:
 
 - Lock screen is visually coherent.
 - Configuration remains simple and reproducible.
-- No secrets, private details, or real-world military identifiers are used.
+- No sensitive or real-world identifiers are used.
 
 ---
 
@@ -212,13 +161,10 @@ Expected result:
 
 **Status:** Open after the first utility pass.
 
-**Why:** The live system is still being built locally in `/etc/nixos`. Before creating a future implementation repository, the configuration should be organized enough to avoid dragging messy experiment history into the public OS codebase.
-
 Expected result:
 
 - Clear separation between system configuration and user configuration.
-- No hardware-generated config committed to public docs.
-- No secrets, Tailscale auth material, SSH keys, or private network details included.
+- Hardware-generated config stays out of public docs.
 - Candidate structure identified for a later `vanguard-os` repository.
 
 ---
@@ -226,8 +172,6 @@ Expected result:
 ### 14. Update documentation after each confirmed local milestone
 
 **Status:** Ongoing.
-
-**Why:** The GitHub repository is documentation/planning only for now. It should record what has actually been tested locally, not imagined implementation details.
 
 Expected result:
 
