@@ -38,24 +38,29 @@ Local implementation note:
 
 ---
 
-### 2. Add a simple status bar
+### 2. Simple status bar
 
-**Status:** Next.
+**Status:** Complete locally.
 
-**Why:** The desktop works, but it has no persistent system information. A basic Waybar setup should show time, workspace state, network state, audio level, battery or power state where relevant, and simple system status.
+**Why:** The desktop needed persistent system information before it could be treated as a usable workstation baseline.
 
-Expected result:
+Confirmed result:
 
-- Waybar starts with Hyprland.
+- Waybar starts under Hyprland.
 - Bar content is minimal and readable.
+- Initial modules include Hyprland workspaces, clock, network, CPU, memory, and tray.
 - Configuration remains generic enough to adjust later.
-- No heavy Vanguard theming yet.
+- No heavy Vanguard theming has been added yet.
+
+Local implementation note:
+
+- Completed in local `/etc/nixos` commit `4dc5eab` — `Add status bar foundation`.
 
 ---
 
 ### 3. Add a notification daemon
 
-**Status:** Open.
+**Status:** Next.
 
 **Why:** Many desktop tools rely on notifications for useful feedback. Without a notification daemon, failures and confirmations can disappear silently, which is a stupid way for a computer to be mysterious.
 
