@@ -56,18 +56,18 @@ Completed:
 - Flake test rebuild with `.#vanguard`.
 - Permanent flake switch.
 - Local `flake-conversion` branch merged back into `master`.
+- Home Manager integration.
 
 Remaining:
 
-1. Home Manager integration.
-2. Hyprland running.
-3. Development host configuration cleanup.
-4. Basic repository structure for the future implementation repository.
-5. Core documentation sync.
+1. Hyprland running.
+2. Development host configuration cleanup.
+3. Basic repository structure for the future implementation repository.
+4. Core documentation sync.
 
 Current next action:
 
-- Start the local `home-manager-foundation` branch.
+- Start the local `hyprland-foundation` branch.
 
 **Exit criteria:** Vanguard can be built and iterated from a flake-based local configuration, then moved into the future implementation repository when stable enough.
 
