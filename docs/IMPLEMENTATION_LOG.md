@@ -32,16 +32,36 @@ Local-only items intentionally not committed here:
 
 ---
 
+## 2026-07-02 — Local Configuration Baseline
+
+**Status:** Local `/etc/nixos` history established.
+
+Confirmed setup:
+
+- `/etc/nixos` initialized as a local Git repository.
+- Initial system configuration committed as the recoverable base.
+- Local `.gitignore` added for Nix build outputs, editor files, and scratch files.
+- Flakes support enabled through `nix.settings.experimental-features`.
+- Local `flake-conversion` branch created before introducing `flake.nix`.
+- Initial `flake.nix` and `flake.lock` created.
+- `nix flake show` confirmed `nixosConfigurations.vanguard` exists.
+- `nixos-rebuild test --flake .#vanguard` completed successfully.
+
+Important boundary:
+
+The live local NixOS configuration is being versioned on the Vanguard machine first. This repository records the milestone and order of work, but still does not contain the live implementation.
+
+---
+
 ## Immediate Next Steps
 
-1. Put `/etc/nixos` under local Git on the Vanguard machine.
-2. Keep the local NixOS configuration recoverable before larger changes.
-3. Create the future `vanguard-os` implementation repository when the local base is stable enough to formalize.
-4. Convert the configuration to flakes.
-5. Add Home Manager.
-6. Enable Hyprland.
-7. Configure `greetd` as the login foundation.
-8. Begin Vanguard identity work only after the base system is reproducible.
+1. Run `nixos-rebuild switch --flake .#vanguard` locally to make the flake workflow permanent.
+2. Verify the local Git tree is clean after the flake-based switch.
+3. Merge the local `flake-conversion` branch back into `master` on the Vanguard machine.
+4. Continue with Home Manager.
+5. Enable Hyprland only after Home Manager and the flake base are stable.
+6. Configure `greetd` as the login foundation.
+7. Begin Vanguard identity work only after the base system is reproducible.
 
 ---
 
