@@ -76,6 +76,27 @@ Confirmed setup:
 - Temporary local `home-manager-foundation` branch was removed after merge.
 - Local Git tree returned to a clean state.
 
+---
+
+## 2026-07-02 — Hyprland Foundation
+
+**Status:** Complete.
+
+Confirmed setup:
+
+- Local `hyprland-foundation` branch created before editing the graphical session configuration.
+- System-level Hyprland support enabled through the NixOS configuration.
+- Minimal user-level Hyprland configuration added through Home Manager-managed `hyprland.conf`.
+- `kitty` added as the first terminal inside the graphical session.
+- Basic keybinds tested: open terminal, close active window, and exit Hyprland.
+- Norwegian keyboard layout configured for the Hyprland session.
+- `nixos-rebuild test --flake .#vanguard` completed successfully.
+- Hyprland launched successfully from TTY.
+- `nixos-rebuild switch --flake .#vanguard` completed successfully after validation.
+- Local `hyprland-foundation` branch was fast-forwarded into `master`.
+- Temporary local `hyprland-foundation` branch was removed after merge.
+- Local Git tree returned to a clean state.
+
 Important boundary:
 
 The live local NixOS configuration is being versioned on the Vanguard machine first. This repository records the milestone and order of work, but still does not contain the live implementation.
@@ -84,11 +105,11 @@ The live local NixOS configuration is being versioned on the Vanguard machine fi
 
 ## Immediate Next Steps
 
-1. Create a local `hyprland-foundation` branch on the Vanguard machine.
-2. Add Hyprland in the smallest viable form.
-3. Keep the first Hyprland change focused on proving a basic graphical session can start.
-4. Do not start `greetd` or identity/theming work until Hyprland itself is stable.
-5. Update this repository again after the Hyprland foundation is tested and merged locally.
+1. Create a local `greetd-foundation` branch on the Vanguard machine.
+2. Add the login foundation in the smallest viable form.
+3. Keep the first `greetd` change focused on reaching the working Hyprland session cleanly.
+4. Do not start identity/theming work until the login path is stable.
+5. Update this repository again after the `greetd` foundation is tested and merged locally.
 
 ---
 
