@@ -66,7 +66,11 @@ Confirmed first host milestone:
 - Kitty font and keybinding improvements added locally
 - File manager, standard user directories, and Trash support added locally
 - Screenshot utilities added and tested locally
-- Clipboard history storage foundation added locally, with picker keybind still unresolved
+- Clipboard history storage and picker shortcut added and tested locally
+
+Current next local priority:
+
+- Add a simple status bar as part of the desktop sanity baseline.
 
 The first implementation repository is still expected to be created later as `vanguard-os` when the local configuration is stable enough to formalize.
 
