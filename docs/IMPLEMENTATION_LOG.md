@@ -233,9 +233,28 @@ Confirmed setup:
 - Local Git tree returned to a clean state.
 - Completed in local `/etc/nixos` commit `f646cfb` — `Add notification daemon foundation`.
 
+---
+
+## 2026-07-02 — Graphical Privilege Prompt Foundation
+
+**Status:** Complete locally.
+
+Confirmed setup:
+
+- Local `polkit-auth-foundation` branch created before adding the graphical prompt agent.
+- `polkit_gnome` added as the initial graphical privilege prompt agent.
+- Hyprland startup configuration now includes the generated Nix store path for the agent.
+- `nixos-rebuild build --flake .#vanguard` completed successfully.
+- `nixos-rebuild switch --flake .#vanguard` completed successfully after validation.
+- Generated Hyprland configuration showed the resolved agent path.
+- Manual agent launch stayed running silently, which is expected for a background prompt agent.
+- Local `polkit-auth-foundation` branch was fast-forwarded into `master`.
+- Temporary local `polkit-auth-foundation` branch was removed after merge.
+- Local Git tree returned to a clean state.
+- Completed in local `/etc/nixos` commit `a97ae47` — `Add polkit authentication agent`.
+
 Known follow-up:
 
-- Confirm polkit authentication flow.
 - Confirm XDG desktop portal behavior.
 - Add basic audio and display controls.
 - Improve lock screen appearance after utility basics are stable.
@@ -244,12 +263,11 @@ Known follow-up:
 
 ## Immediate Next Steps
 
-1. Confirm polkit authentication flow.
-2. Confirm XDG desktop portal behavior.
-3. Add audio and volume control basics.
-4. Add basic display and brightness controls.
-5. Keep lock screen theming deferred until the utility baseline is stable.
-6. Keep updating `docs/TODO.md` as the working sequence changes.
+1. Confirm XDG desktop portal behavior.
+2. Add audio and volume control basics.
+3. Add basic display and brightness controls.
+4. Keep lock screen theming deferred until the utility baseline is stable.
+5. Keep updating `docs/TODO.md` as the working sequence changes.
 
 ---
 
