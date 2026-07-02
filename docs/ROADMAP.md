@@ -23,6 +23,8 @@ Version numbers represent project maturity, not final feature completeness.
 
 Detailed architecture planning lives in `docs/ARCHITECTURE.md`.
 
+The active working queue lives in `docs/TODO.md`.
+
 ---
 
 ## Version 0.0 — First Brick
@@ -64,16 +66,27 @@ Completed:
 - Greeter-launched Hyprland session tested.
 - Fuzzel launcher added and tested.
 - Vivaldi browser added and tested.
+- Kitty font and keybinding improvements added locally.
+- Desktop lock shortcut added locally.
+- Nautilus file manager added locally.
+- Standard user directories added locally.
+- Nautilus Trash support enabled through `gvfs`.
+- Screenshot utilities added and tested locally.
+- Clipboard history storage foundation added locally.
 
 Remaining:
 
-1. Development host configuration cleanup.
-2. Basic repository structure for the future implementation repository.
-3. Core documentation sync.
+1. Resolve clipboard history picker keybind.
+2. Add a simple status bar.
+3. Add basic audio and volume controls.
+4. Add basic display and brightness controls.
+5. Development host configuration cleanup.
+6. Basic repository structure for the future implementation repository.
+7. Core documentation sync.
 
 Current next action:
 
-- Start the local `desktop-utilities-foundation` branch.
+- Fix or redesign the clipboard history picker launcher.
 
 **Exit criteria:** Vanguard can be built and iterated from a flake-based local configuration, then moved into the future implementation repository when stable enough.
 
@@ -211,3 +224,4 @@ Minimum expectations:
 - Optional lore document
 - Slogan or tagline
 - Intentional engineering/debug-screen aesthetic
+- Full lock screen theming, until the functional utility baseline is stable
