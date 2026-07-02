@@ -57,6 +57,7 @@ Confirmed first host milestone:
 - Initial base tools installed, including `fastfetch`
 - Local `/etc/nixos` Git baseline established
 - Local flake workflow tested and made permanent
+- Home Manager foundation added and tested locally
 
 The first implementation repository is still expected to be created later as `vanguard-os` when the local configuration is stable enough to formalize.
 
