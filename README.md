@@ -60,6 +60,7 @@ Confirmed first host milestone:
 - Home Manager foundation added and tested locally
 - Hyprland foundation added, launched, and tested locally
 - `greetd` login foundation added and tested locally
+- Desktop launcher and browser foundation added and tested locally
 
 The first implementation repository is still expected to be created later as `vanguard-os` when the local configuration is stable enough to formalize.
 
