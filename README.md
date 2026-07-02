@@ -25,6 +25,7 @@ It contains:
 - Roadmap
 - Architecture planning
 - Implementation milestone notes
+- Current TODO sequence
 - Worldbuilding notes
 - Future implementation guidance
 
@@ -37,6 +38,7 @@ It should not contain the actual operating system implementation, hardware-gener
 - `PROJECT_SCOPE.md` — project boundaries, goals, and out-of-scope items
 - `docs/DESIGN_PRINCIPLES.md` — design rules and experience principles
 - `docs/ROADMAP.md` — planned project milestones
+- `docs/TODO.md` — current chronological task sequence and why each task exists
 - `docs/ARCHITECTURE.md` — planned future implementation architecture
 - `docs/IMPLEMENTATION_LOG.md` — confirmed build milestones and local implementation notes
 - `docs/WORLDBUILDING_NOTES.md` — temporary fictional identity notes
@@ -61,6 +63,10 @@ Confirmed first host milestone:
 - Hyprland foundation added, launched, and tested locally
 - `greetd` login foundation added and tested locally
 - Desktop launcher and browser foundation added and tested locally
+- Kitty font and keybinding improvements added locally
+- File manager, standard user directories, and Trash support added locally
+- Screenshot utilities added and tested locally
+- Clipboard history storage foundation added locally, with picker keybind still unresolved
 
 The first implementation repository is still expected to be created later as `vanguard-os` when the local configuration is stable enough to formalize.
 
