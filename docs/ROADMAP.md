@@ -72,21 +72,23 @@ Completed:
 - Standard user directories added locally.
 - Nautilus Trash support enabled through `gvfs`.
 - Screenshot utilities added and tested locally.
-- Clipboard history storage foundation added locally.
+- Clipboard history storage and picker shortcut added and tested locally.
 
 Remaining:
 
-1. Resolve clipboard history picker keybind.
-2. Add a simple status bar.
-3. Add basic audio and volume controls.
-4. Add basic display and brightness controls.
-5. Development host configuration cleanup.
-6. Basic repository structure for the future implementation repository.
-7. Core documentation sync.
+1. Add a simple status bar.
+2. Add a notification daemon.
+3. Confirm polkit authentication flow.
+4. Confirm XDG desktop portal behavior.
+5. Add basic audio and volume controls.
+6. Add basic display and brightness controls.
+7. Development host configuration cleanup.
+8. Basic repository structure for the future implementation repository.
+9. Core documentation sync.
 
 Current next action:
 
-- Fix or redesign the clipboard history picker launcher.
+- Add a simple status bar as part of the desktop sanity baseline.
 
 **Exit criteria:** Vanguard can be built and iterated from a flake-based local configuration, then moved into the future implementation repository when stable enough.
 
