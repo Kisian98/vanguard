@@ -168,7 +168,7 @@ Known follow-up:
 
 ## 2026-07-02 — Desktop Utilities Foundation
 
-**Status:** Partially complete.
+**Status:** Complete for file manager, screenshots, and clipboard history foundation.
 
 Confirmed setup:
 
@@ -182,16 +182,19 @@ Confirmed setup:
 - Screenshot output directory confirmed under the user's Pictures directory.
 - `cliphist` added as the clipboard history foundation.
 - Clipboard entries are stored correctly.
-- The manual clipboard picker command works.
-- The `SUPER + V` clipboard picker keybind does not launch correctly yet and is intentionally left as a TODO instead of marked complete.
-- Local `desktop-utilities-foundation` branch was fast-forwarded into `master`.
-- Temporary local `desktop-utilities-foundation` branch was removed after merge.
+- The clipboard picker script works manually.
+- `SUPER + V` opens the clipboard history picker through Fuzzel.
+- Selecting a clipboard history item and then pressing `CTRL + V` pastes the selected item correctly.
+- Clipboard picker fix completed locally in commit `f73d80a` — `Fix clipboard history picker shortcut`.
+- Local utility branches were fast-forwarded into `master` and removed after merge.
 - Local Git tree returned to a clean state.
 
 Known follow-up:
 
-- Fix the clipboard history picker keybind.
 - Add a simple status bar.
+- Add a notification daemon.
+- Confirm polkit authentication flow.
+- Confirm XDG desktop portal behavior.
 - Add basic audio and display controls.
 - Improve lock screen appearance after utility basics are stable.
 
@@ -199,12 +202,14 @@ Known follow-up:
 
 ## Immediate Next Steps
 
-1. Resolve the clipboard history picker bind, or choose a different launcher pattern if Hyprland command execution remains fragile.
-2. Add a simple status bar, likely after validating the expected Waybar setup against official and package documentation.
-3. Add audio and volume control basics.
-4. Add basic display and brightness controls.
-5. Keep lock screen theming deferred until the utility baseline is stable.
-6. Keep updating `docs/TODO.md` as the working sequence changes.
+1. Add a simple status bar, likely after validating the expected Waybar setup against official and package documentation.
+2. Add a notification daemon.
+3. Confirm polkit authentication flow.
+4. Confirm XDG desktop portal behavior.
+5. Add audio and volume control basics.
+6. Add basic display and brightness controls.
+7. Keep lock screen theming deferred until the utility baseline is stable.
+8. Keep updating `docs/TODO.md` as the working sequence changes.
 
 ---
 
