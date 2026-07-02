@@ -17,8 +17,6 @@ Confirmed setup:
 - NixOS installed on a dedicated 1 TB HDD for Vanguard experimentation.
 - Existing Fedora and Windows installations left untouched.
 - NixOS uses its own EFI partition and `systemd-boot` loader.
-- Fedora GRUB remains the main boot menu and includes a custom `Vanguard OS (NixOS)` entry.
-- The Vanguard system can be booted from the existing themed GRUB menu.
 - Primary local operator account: `operator`.
 - Tailscale and OpenSSH enabled for remote administration.
 - Initial base tools added: `git`, `vim`, `wget`, `curl`, `nano`, and `fastfetch`.
