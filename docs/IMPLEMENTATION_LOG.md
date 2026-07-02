@@ -189,9 +189,31 @@ Confirmed setup:
 - Local utility branches were fast-forwarded into `master` and removed after merge.
 - Local Git tree returned to a clean state.
 
+---
+
+## 2026-07-02 — Status Bar Foundation
+
+**Status:** Complete locally.
+
+Confirmed setup:
+
+- Local `status-bar-foundation` branch created before adding Waybar.
+- Waybar added through Home Manager configuration.
+- Waybar added to the user package set.
+- Hyprland startup configuration now includes `exec-once = waybar`.
+- Initial Waybar modules include Hyprland workspaces, clock, network, CPU, memory, and tray.
+- `nixos-rebuild build --flake .#vanguard` completed successfully.
+- `nixos-rebuild switch --flake .#vanguard` completed successfully after validation.
+- Manual `waybar` launch displayed the bar correctly.
+- `hyprctl dispatch exec waybar` displayed the bar correctly.
+- Generated Hyprland configuration confirmed the Waybar startup line.
+- Local `status-bar-foundation` branch was fast-forwarded into `master`.
+- Temporary local `status-bar-foundation` branch was removed after merge.
+- Local Git tree returned to a clean state.
+- Completed in local `/etc/nixos` commit `4dc5eab` — `Add status bar foundation`.
+
 Known follow-up:
 
-- Add a simple status bar.
 - Add a notification daemon.
 - Confirm polkit authentication flow.
 - Confirm XDG desktop portal behavior.
@@ -202,14 +224,13 @@ Known follow-up:
 
 ## Immediate Next Steps
 
-1. Add a simple status bar, likely after validating the expected Waybar setup against official and package documentation.
-2. Add a notification daemon.
-3. Confirm polkit authentication flow.
-4. Confirm XDG desktop portal behavior.
-5. Add audio and volume control basics.
-6. Add basic display and brightness controls.
-7. Keep lock screen theming deferred until the utility baseline is stable.
-8. Keep updating `docs/TODO.md` as the working sequence changes.
+1. Add a notification daemon.
+2. Confirm polkit authentication flow.
+3. Confirm XDG desktop portal behavior.
+4. Add audio and volume control basics.
+5. Add basic display and brightness controls.
+6. Keep lock screen theming deferred until the utility baseline is stable.
+7. Keep updating `docs/TODO.md` as the working sequence changes.
 
 ---
 
