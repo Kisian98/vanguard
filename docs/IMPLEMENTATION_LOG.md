@@ -97,6 +97,27 @@ Confirmed setup:
 - Temporary local `hyprland-foundation` branch was removed after merge.
 - Local Git tree returned to a clean state.
 
+---
+
+## 2026-07-02 — Greetd Login Foundation
+
+**Status:** Complete.
+
+Confirmed setup:
+
+- Local `greetd-foundation` branch created before editing the login configuration.
+- `greetd` enabled as the first login manager foundation.
+- `tuigreet` configured as the minimal text-based greeter.
+- The greeter command starts the existing Hyprland session.
+- `nixos-rebuild build --flake .#vanguard` completed successfully.
+- `nixos-rebuild test --flake .#vanguard` activated the greeter successfully.
+- Login as `operator` launched Hyprland from the greeter.
+- Kitty worked inside the greeter-launched Hyprland session.
+- `nixos-rebuild switch --flake .#vanguard` completed successfully after validation.
+- Local `greetd-foundation` branch was fast-forwarded into `master`.
+- Temporary local `greetd-foundation` branch was removed after merge.
+- Local Git tree returned to a clean state.
+
 Important boundary:
 
 The live local NixOS configuration is being versioned on the Vanguard machine first. This repository records the milestone and order of work, but still does not contain the live implementation.
@@ -105,11 +126,11 @@ The live local NixOS configuration is being versioned on the Vanguard machine fi
 
 ## Immediate Next Steps
 
-1. Create a local `greetd-foundation` branch on the Vanguard machine.
-2. Add the login foundation in the smallest viable form.
-3. Keep the first `greetd` change focused on reaching the working Hyprland session cleanly.
-4. Do not start identity/theming work until the login path is stable.
-5. Update this repository again after the `greetd` foundation is tested and merged locally.
+1. Create a local `desktop-foundation` branch on the Vanguard machine.
+2. Add the smallest useful desktop package set.
+3. Keep the first desktop change focused on a normal operator workflow inside Hyprland.
+4. Do not start identity/theming work until the basic desktop tools are stable.
+5. Update this repository again after the desktop foundation is tested and merged locally.
 
 ---
 
