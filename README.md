@@ -68,10 +68,11 @@ Confirmed first host milestone:
 - Screenshot utilities added and tested locally
 - Clipboard history storage and picker shortcut added and tested locally
 - Simple Waybar status bar added and tested locally
+- Themeable SwayNotificationCenter notification daemon added and tested locally
 
 Current next local priority:
 
-- Add a notification daemon as part of the desktop sanity baseline.
+- Confirm polkit authentication flow as part of the desktop sanity baseline.
 
 The first implementation repository is still expected to be created later as `vanguard-os` when the local configuration is stable enough to formalize.
 
