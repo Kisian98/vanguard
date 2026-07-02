@@ -12,30 +12,35 @@ The first big goal is not theme polish. It is a workstation that behaves correct
 
 ---
 
-### 1. Resolve clipboard history launcher
+### 1. Clipboard history launcher
 
-**Status:** Open.
+**Status:** Complete locally.
 
-**Why:** Clipboard history is already storing entries through `cliphist`, and the manual picker command works. The `SUPER + V` Hyprland bind does not launch correctly yet. This should be fixed before treating clipboard history as complete.
+**Why:** Clipboard history prevents repeated copy/paste churn and makes the workstation more forgiving during real use.
 
-Expected result:
+Confirmed result:
 
 - `wl-paste --watch cliphist store` starts automatically.
 - Clipboard entries are stored across normal copy operations.
-- `SUPER + V` opens a picker through Fuzzel or another reliable launcher.
+- `SUPER + V` opens the clipboard history picker through Fuzzel.
 - Selecting an item copies it back to the active clipboard.
+- `CTRL + V` pastes the selected item after picker selection.
 
-Current known-good manual command:
+Known-good picker command:
 
 ```sh
 cliphist list | fuzzel --dmenu | cliphist decode | wl-copy
 ```
 
+Local implementation note:
+
+- Completed in local `/etc/nixos` commit `f73d80a` — `Fix clipboard history picker shortcut`.
+
 ---
 
 ### 2. Add a simple status bar
 
-**Status:** Open.
+**Status:** Next.
 
 **Why:** The desktop works, but it has no persistent system information. A basic Waybar setup should show time, workspace state, network state, audio level, battery or power state where relevant, and simple system status.
 
