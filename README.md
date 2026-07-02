@@ -53,7 +53,6 @@ Confirmed first host milestone:
 - Dedicated NixOS installation for Vanguard experimentation
 - Isolated drive and EFI setup
 - Existing Fedora and Windows installations left untouched
-- Fedora GRUB entry named `Vanguard OS (NixOS)`
 - Tailscale and OpenSSH enabled for remote administration
 - Initial base tools installed, including `fastfetch`
 
