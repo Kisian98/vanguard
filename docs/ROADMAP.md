@@ -34,11 +34,10 @@ Completed:
 - Installed NixOS on a dedicated Vanguard experiment drive.
 - Kept Fedora and Windows isolated from the Vanguard installation.
 - Confirmed NixOS boots through its own EFI partition and `systemd-boot`.
-- Added a `Vanguard OS (NixOS)` entry to the existing Fedora GRUB menu.
 - Enabled Tailscale and OpenSSH for remote administration.
 - Added first base tools: `git`, `vim`, `wget`, `curl`, `nano`, and `fastfetch`.
 
-**Exit criteria:** Vanguard can boot as its own OS entry and be administered remotely for early system work.
+**Exit criteria:** Vanguard can boot cleanly and be administered remotely for early system work.
 
 **Status:** Complete.
 
