@@ -62,6 +62,8 @@ Completed:
 - Norwegian keyboard layout for the Hyprland session.
 - `greetd` and `tuigreet` login foundation.
 - Greeter-launched Hyprland session tested.
+- Fuzzel launcher added and tested.
+- Vivaldi browser added and tested.
 
 Remaining:
 
@@ -71,7 +73,7 @@ Remaining:
 
 Current next action:
 
-- Start the local `desktop-foundation` branch.
+- Start the local `desktop-utilities-foundation` branch.
 
 **Exit criteria:** Vanguard can be built and iterated from a flake-based local configuration, then moved into the future implementation repository when stable enough.
 
