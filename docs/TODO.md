@@ -58,23 +58,29 @@ Local implementation note:
 
 ---
 
-### 3. Add a notification daemon
+### 3. Notification daemon
 
-**Status:** Next.
+**Status:** Complete locally.
 
-**Why:** Many desktop tools rely on notifications for useful feedback. Without a notification daemon, failures and confirmations can disappear silently, which is a stupid way for a computer to be mysterious.
+**Why:** Many desktop tools rely on notifications for useful feedback. The chosen daemon also needs to be themeable later so it can fit the VanguardOS look and feel.
 
-Expected result:
+Confirmed result:
 
-- A Wayland-friendly notification daemon is installed and launched with Hyprland.
-- Test notification appears correctly.
-- Styling remains basic until the visual identity phase.
+- `swaync` / SwayNotificationCenter added as the notification daemon.
+- `libnotify` added so `notify-send` can be used for testing.
+- Hyprland startup configuration includes `exec-once = swaync`.
+- Test notification appeared correctly.
+- The daemon is suitable for later visual customization through configuration and CSS-style theming.
+
+Local implementation note:
+
+- Completed in local `/etc/nixos` commit `f646cfb` — `Add notification daemon foundation`.
 
 ---
 
 ### 4. Confirm polkit authentication flow
 
-**Status:** Open.
+**Status:** Next.
 
 **Why:** Graphical administration tasks often need an authentication prompt. If no polkit agent is available, GUI tools may fail without giving a useful reason.
 
