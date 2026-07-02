@@ -57,17 +57,21 @@ Completed:
 - Permanent flake switch.
 - Local `flake-conversion` branch merged back into `master`.
 - Home Manager integration.
+- Hyprland running from TTY.
+- Basic graphical terminal workflow with Kitty.
+- Norwegian keyboard layout for the Hyprland session.
+- `greetd` and `tuigreet` login foundation.
+- Greeter-launched Hyprland session tested.
 
 Remaining:
 
-1. Hyprland running.
-2. Development host configuration cleanup.
-3. Basic repository structure for the future implementation repository.
-4. Core documentation sync.
+1. Development host configuration cleanup.
+2. Basic repository structure for the future implementation repository.
+3. Core documentation sync.
 
 Current next action:
 
-- Start the local `hyprland-foundation` branch.
+- Start the local `desktop-foundation` branch.
 
 **Exit criteria:** Vanguard can be built and iterated from a flake-based local configuration, then moved into the future implementation repository when stable enough.
 
