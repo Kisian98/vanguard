@@ -73,22 +73,22 @@ Completed:
 - Nautilus Trash support enabled through `gvfs`.
 - Screenshot utilities added and tested locally.
 - Clipboard history storage and picker shortcut added and tested locally.
+- Simple Waybar status bar added and tested locally.
 
 Remaining:
 
-1. Add a simple status bar.
-2. Add a notification daemon.
-3. Confirm polkit authentication flow.
-4. Confirm XDG desktop portal behavior.
-5. Add basic audio and volume controls.
-6. Add basic display and brightness controls.
-7. Development host configuration cleanup.
-8. Basic repository structure for the future implementation repository.
-9. Core documentation sync.
+1. Add a notification daemon.
+2. Confirm polkit authentication flow.
+3. Confirm XDG desktop portal behavior.
+4. Add basic audio and volume controls.
+5. Add basic display and brightness controls.
+6. Development host configuration cleanup.
+7. Basic repository structure for the future implementation repository.
+8. Core documentation sync.
 
 Current next action:
 
-- Add a simple status bar as part of the desktop sanity baseline.
+- Add a notification daemon as part of the desktop sanity baseline.
 
 **Exit criteria:** Vanguard can be built and iterated from a flake-based local configuration, then moved into the future implementation repository when stable enough.
 
