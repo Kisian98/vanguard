@@ -58,6 +58,24 @@ Confirmed setup:
 - Temporary local `flake-conversion` branch was removed after merge.
 - Local Git tree returned to a clean state.
 
+---
+
+## 2026-07-02 — Home Manager Foundation
+
+**Status:** Complete.
+
+Confirmed setup:
+
+- Local `home-manager-foundation` branch created before editing the flake.
+- Home Manager input added to the local flake.
+- Minimal `home.nix` created for the `operator` user.
+- Home Manager was integrated through the NixOS module path.
+- `nix flake show` confirmed the updated flake remained valid.
+- `nixos-rebuild test --flake .#vanguard` completed successfully.
+- Local `home-manager-foundation` branch was fast-forwarded into `master`.
+- Temporary local `home-manager-foundation` branch was removed after merge.
+- Local Git tree returned to a clean state.
+
 Important boundary:
 
 The live local NixOS configuration is being versioned on the Vanguard machine first. This repository records the milestone and order of work, but still does not contain the live implementation.
@@ -66,11 +84,11 @@ The live local NixOS configuration is being versioned on the Vanguard machine fi
 
 ## Immediate Next Steps
 
-1. Create a local `home-manager-foundation` branch on the Vanguard machine.
-2. Add Home Manager in the smallest viable form.
-3. Keep the first Home Manager change focused on user-level package/profile control only.
-4. Do not start Hyprland, `greetd`, or identity/theming work until Home Manager is stable.
-5. Update this repository again after the Home Manager foundation is tested and merged locally.
+1. Create a local `hyprland-foundation` branch on the Vanguard machine.
+2. Add Hyprland in the smallest viable form.
+3. Keep the first Hyprland change focused on proving a basic graphical session can start.
+4. Do not start `greetd` or identity/theming work until Hyprland itself is stable.
+5. Update this repository again after the Hyprland foundation is tested and merged locally.
 
 ---
 
