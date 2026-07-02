@@ -212,9 +212,29 @@ Confirmed setup:
 - Local Git tree returned to a clean state.
 - Completed in local `/etc/nixos` commit `4dc5eab` — `Add status bar foundation`.
 
+---
+
+## 2026-07-02 — Notification Daemon Foundation
+
+**Status:** Complete locally.
+
+Confirmed setup:
+
+- Local `notification-daemon-foundation` branch created before adding notifications.
+- `swaynotificationcenter` added as the notification daemon.
+- `libnotify` added for `notify-send` testing.
+- Hyprland startup configuration now includes `exec-once = swaync`.
+- `nixos-rebuild build --flake .#vanguard` completed successfully.
+- `nixos-rebuild switch --flake .#vanguard` completed successfully after validation.
+- `notify-send` produced a visible test notification.
+- The selected notification stack can be customized later to fit the VanguardOS look and feel.
+- Local `notification-daemon-foundation` branch was fast-forwarded into `master`.
+- Temporary local `notification-daemon-foundation` branch was removed after merge.
+- Local Git tree returned to a clean state.
+- Completed in local `/etc/nixos` commit `f646cfb` — `Add notification daemon foundation`.
+
 Known follow-up:
 
-- Add a notification daemon.
 - Confirm polkit authentication flow.
 - Confirm XDG desktop portal behavior.
 - Add basic audio and display controls.
@@ -224,13 +244,12 @@ Known follow-up:
 
 ## Immediate Next Steps
 
-1. Add a notification daemon.
-2. Confirm polkit authentication flow.
-3. Confirm XDG desktop portal behavior.
-4. Add audio and volume control basics.
-5. Add basic display and brightness controls.
-6. Keep lock screen theming deferred until the utility baseline is stable.
-7. Keep updating `docs/TODO.md` as the working sequence changes.
+1. Confirm polkit authentication flow.
+2. Confirm XDG desktop portal behavior.
+3. Add audio and volume control basics.
+4. Add basic display and brightness controls.
+5. Keep lock screen theming deferred until the utility baseline is stable.
+6. Keep updating `docs/TODO.md` as the working sequence changes.
 
 ---
 
